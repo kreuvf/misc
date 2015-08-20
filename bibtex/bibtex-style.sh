@@ -10,6 +10,7 @@
 #
 # * Convert newlines to Unix/Linux newlines
 # * Remove UTF-8 Byte-Order Mark
+# * Remove escaped curly braces
 # * Use curly braces instead of quotes
 # * Remove whitespace after opening curly brace
 # * Remove whitespace before closing curly brace
@@ -32,10 +33,13 @@
 # * Expand page ranges to full numbers ("4256-68" becomes "4256-4268")
 # * Make page range expansion work with weird numbers as well (like "S368-70")
 # * Put names into unambiguous order ("L_name, F_name and L_name, F_name"
+# * Understand escaped special characters and work around those (instead of killing them)
 
 dos2unix --quiet "$1"
 sed -i -r \
 -e '1s|^\xEF\xBB\xBF||' \
+-e 's|\\\{||g' \
+-e 's|\\\}||g' \
 -e 's|^([^"]+)"([^"]*)"(.*)$|\1{\2}\3|' \
 -e 's|\{[[:space:]]*|{|' \
 -e 's|[[:space:]]*\}|}|' \
