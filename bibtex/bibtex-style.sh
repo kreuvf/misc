@@ -22,6 +22,7 @@
 # * Replace entry field "journal" with "journaltitle"
 # * Remove empty entry fields
 # * Remove trailing whitespace at the end of the line, before the final comma
+# * Remove whitespace at the end of the line (after "}")
 # * End every entry field value with a comma (= comma after "}")
 #
 # Future plans (the tricky non-oneliner ones ;D)
@@ -47,10 +48,10 @@ sed -i -r \
 -e 's|^([^=]*)=|\L\1=|g' \
 -e 's|^\t([^[:space:]]+)[[:space:]]*=|\t\1 =|g' \
 -e 's|=[[:space:]]*|= |' \
--e 's|pages = \{([^-[:space:]]+)([-[:space:]]+)([^-[:space:]]+)\}|pages = {\1-\3}|' \
+-e 's|pages = \{([^-[:space:]]+)-[-[:space:]]*([^-[:space:]]+)\}|pages = {\1-\2}|' \
 -e 's|journal = \{|journaltitle = {|' \
 -e '/\{\}/ d' \
 -e 's|[[:space:]]*,[[:space:]]*$|,|' \
+-e 's|^(.*\})[[:space:]]*$|\1|' \
 -e 's|^(\t.*)\}$|\1},|' "$1"
-
 
