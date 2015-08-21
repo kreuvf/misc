@@ -6,6 +6,8 @@
 # Created: 2015-08-21
 # Licence: Public domain
 #
+# Expects bibtex-style.sh'ed BibTeX bibliography
+#
 # * Authors in author field must be separated by ";"
 #
 # Future plans (the tricky non-oneliner ones ;D)
@@ -13,5 +15,4 @@
 
 sed -i -r \
 -e '/author =/s| and |; |g' "$1"
-
 
