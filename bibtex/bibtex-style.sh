@@ -55,5 +55,5 @@ sed -i -r \
 -e 's|[[:space:]]*,[[:space:]]*$|,|' \
 -e 's|^(.*\})[[:space:]]*$|\1|' \
 -e 's|^(\t.*)\}$|\1},|' \
--e '/\tdoi = {/ s|https?://dx.doi.org/||' "$1"
+-e '/\tdoi = \{/ s|https?://dx.doi.org/||' "$1"
 
