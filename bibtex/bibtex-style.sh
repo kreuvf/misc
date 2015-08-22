@@ -49,7 +49,7 @@ sed -i -r \
 -e 's|^([^=]*)=|\L\1=|g' \
 -e 's|^\t([^[:space:]]+)[[:space:]]*=|\t\1 =|g' \
 -e 's|=[[:space:]]*|= |' \
--e 's|pages = \{([^-[:space:]]+)-[-[:space:]]*([^-[:space:]]+)\}|pages = {\1-\2}|' \
+-e 's|pages = \{([^-[:space:]]+)[-[:space:]]*-[-[:space:]]*([^-[:space:]]+)\}|pages = {\1-\2}|' \
 -e 's|journal = \{|journaltitle = {|' \
 -e '/\{\}/ d' \
 -e 's|[[:space:]]*,[[:space:]]*$|,|' \
