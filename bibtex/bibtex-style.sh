@@ -9,7 +9,7 @@
 # Uses GNU extensions of sed.
 #
 # * Convert newlines to Unix/Linux newlines
-# * Remove UTF-8 Byte-Order Mark
+# * Remove UTF-8 Byte-Order Mark everywhere
 # * Remove escaped curly braces
 # * Use curly braces instead of quotes
 # * Remove whitespace after opening curly brace
@@ -24,10 +24,10 @@
 # * Remove trailing whitespace at the end of the line, before the final comma
 # * Remove whitespace at the end of the line (after "}")
 # * End every entry field value with a comma (= comma after "}")
+# * In doi field remove URL to DOI resolver and replace with DOI
 #
 # Future plans (the tricky non-oneliner ones ;D)
 # * Remove link to DOI resolver if DOI is given and the same
-# * Remove link to DOI resolver and replace with DOI
 # * For article entry fields use sequence:
 #  * author, title, year, journaltitle, volume, number, pages, doi/url, note
 #  * everything else afterwards in alphabetical order
@@ -38,7 +38,7 @@
 
 dos2unix --quiet "$1"
 sed -i -r \
--e '1s|^\xEF\xBB\xBF||' \
+-e 's|^\xEF\xBB\xBF||' \
 -e 's|\\\{||g' \
 -e 's|\\\}||g' \
 -e 's|^([^"]+)"([^"]*)"(.*)$|\1{\2}\3|' \
@@ -53,5 +53,6 @@ sed -i -r \
 -e '/\{\}/ d' \
 -e 's|[[:space:]]*,[[:space:]]*$|,|' \
 -e 's|^(.*\})[[:space:]]*$|\1|' \
--e 's|^(\t.*)\}$|\1},|' "$1"
+-e 's|^(\t.*)\}$|\1},|' \
+-e '/\tdoi = {/ s|https?://dx.doi.org/||' "$1"
 
