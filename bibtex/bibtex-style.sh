@@ -27,7 +27,8 @@
 # * In doi field remove URL to DOI resolver and replace with DOI
 #
 # Future plans (the tricky non-oneliner ones ;D)
-# * Remove link to DOI resolver if DOI is given and the same
+# * Remove url field, if it is a link to the DOI resolver if DOI is given and the same
+# * Replace url field with URL to DOI resolver with doi field containing the DOI
 # * For article entry fields use sequence:
 #  * author, title, year, journaltitle, volume, number, pages, doi/url, note
 #  * everything else afterwards in alphabetical order
