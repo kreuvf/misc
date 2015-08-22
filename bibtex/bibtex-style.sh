@@ -19,7 +19,7 @@
 # * Use one and only one space as whitespace between entry field and equality sign
 # * Use one and only one space as whitespace between equality sign and curly brace
 # * Use one and only one dash for page ranges, no whitespace
-# * Replace entry field "journal" with "journaltitle"
+# * Replace entry field "journaltitle" with "journal"
 # * Remove empty entry fields
 # * Remove trailing whitespace at the end of the line, before the final comma
 # * Remove whitespace at the end of the line (after "}")
@@ -50,7 +50,7 @@ sed -i -r \
 -e 's|^\t([^[:space:]]+)[[:space:]]*=|\t\1 =|g' \
 -e 's|=[[:space:]]*|= |' \
 -e '/pages = \{/ s|\{([^-[:space:]]+)[-[:space:]]*-[-[:space:]]*([^-[:space:]]+)\}|{\1-\2}|' \
--e 's|journal = \{|journaltitle = {|' \
+-e 's|journaltitle = \{|journal = {|' \
 -e '/\{\}/ d' \
 -e 's|[[:space:]]*,[[:space:]]*$|,|' \
 -e 's|^(.*\})[[:space:]]*$|\1|' \
