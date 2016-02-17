@@ -12,6 +12,8 @@
 # * Remove UTF-8 Byte-Order Mark everywhere
 # * Remove escaped curly braces
 # * Use curly braces instead of quotes
+# * Remove whitespace between entry type and opening curly brace
+# * Use small letters only for entry type "article"
 # * Remove whitespace after opening curly brace
 # * Remove whitespace before closing curly brace
 # * Use one and only one tab to indent entry fields
@@ -43,6 +45,8 @@ sed -i -r \
 -e 's|\\\{||g' \
 -e 's|\\\}||g' \
 -e 's|^([^"]+)"([^"]*)"(.*)$|\1{\2}\3|' \
+-e '/^@/ s|(@[a-zA-Z]+)[[:space:]]+\{|\1\{|' \
+-e '/^@/ s|@article|@article|i' \
 -e 's|\{[[:space:]]*|{|' \
 -e 's|[[:space:]]*\}|}|' \
 -e 's|^[[:space:]]*([^@}\t].*)$|\t\1|g' \
