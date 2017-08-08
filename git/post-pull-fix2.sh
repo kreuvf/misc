@@ -6,7 +6,6 @@
 # Use in root dir of git repository
 # Fixes some newline-related weirdness
 sed -r -i -e '/^\* text=auto$/d' .gitattributes
-git stash
-git stash drop
-# Yeah, stashing and then dropping is okay, git is satisfied
+git checkout -- .gitattributes
+# Yeah, discarding the changes is ok, git is satisfied
 
