@@ -1,0 +1,2 @@
+7z a -w/home/username/Desktop -l -t7z -m0=LZMA2 -mmt=8 -mx=3 -- <7z filename> <input files>
+

@@ -1,0 +1,2 @@
+tar cf - <directory> | 7z a -si -l -t7z -m0=LZMA2 -mmt=8 -mx=3 <tar.7z filename>
+
