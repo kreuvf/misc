@@ -45,6 +45,7 @@ find ./"$1"/resources/lib/jquery.i18n/src/languages -type f >> MW_prepare_i18n_d
 find ./"$1"/skins/Vector/i18n -type f >> MW_prepare_i18n_deletion.lst
 find ./"$1"/extensions/Cite/i18n -type f >> MW_prepare_i18n_deletion.lst
 find ./"$1"/extensions/Cite/modules/ve-cite/i18n -type f >> MW_prepare_i18n_deletion.lst
+find ./"$1"/extensions/intersection/i18n -type f >> MW_prepare_i18n_deletion.lst
 find ./"$1"/extensions/WikiEditor/i18n -type f >> MW_prepare_i18n_deletion.lst
 find ./"$1"/extensions/Poem/i18n -type f >> MW_prepare_i18n_deletion.lst
 find ./"$1"/extensions/ParserFunctions/i18n -type f >> MW_prepare_i18n_deletion.lst
@@ -99,5 +100,5 @@ rm --force --recursive \
 	./"$1"/vendor/pear/net_smtp/docs
 
 # Gather files unnecessary for just running the wiki
-find ./"$1"/ -type f -regextype posix-extended -regex '.*(\.editorconfig|\.(es|style)lintrc\.json|\.scrutinizer\.yml|\.stylelintrc|(APACHE|GPL|MIT)?-?LICENSE-?(2\.0|MIT)?(\.txt)?|AUTHORS(\.txt)?|changelog\.txt|CHANGELOG(\.md)?|CHANGES\.md|CODE_OF_CONDUCT\.md|composer\.local\.json-sample|CONTRIBUTING\.md|COPYING(\.txt)?|dependencies\.txt|Doxyfile|errors\.md|example_debug\.png|FAQ|formats\.md|Gemfile\.lock|Gruntfile\.js|History(\.md)?|HISTORY(\.md)?|INSTALL|Makefile(\.py)?|license\.txt|NOTICE\.txt|PATCHES|phpdoc\.sh|Rakefile|readme\.txt|README(\.md|\.rst)?|RELEASE-NOTES-?.*|StartProfiler\.sample|structure\.txt|styleguide\.md|UPGRADE(\.md)?|resources/lib/jquery\.i18n/CREDITS)$' | xargs --interactive /bin/rm -f
+find ./"$1"/ -type f -regextype posix-extended -regex '.*(\.editorconfig|\.(es|style)lintrc\.json|\.git(ignore|review)|\.scrutinizer\.yml|\.stylelintrc|(APACHE|GPL|MIT)?-?LICENSE-?(2\.0|MIT)?(\.txt)?|AUTHORS(\.txt)?|changelog\.txt|CHANGELOG(\.md)?|CHANGES\.md|CODE_OF_CONDUCT\.md|composer\.local\.json-sample|CONTRIBUTING\.md|COPYING(\.txt)?|dependencies\.txt|Doxyfile|errors\.md|example_debug\.png|FAQ|formats\.md|Gemfile\.lock|gitinfo\.json|Gruntfile\.js|History(\.md)?|HISTORY(\.md)?|INSTALL|Makefile(\.py)?|license\.txt|NOTICE\.txt|PATCHES|phpdoc\.sh|Rakefile|readme\.txt|README(\.md|\.rst)?|RELEASE-NOTES-?.*|StartProfiler\.sample|structure\.txt|styleguide\.md|UPGRADE(\.md)?|version|resources/lib/jquery\.i18n/CREDITS)$' | xargs --interactive /bin/rm -f
 
