@@ -52,11 +52,11 @@ M_USAGE="Usage: metadata-ogg2flac.sh <common directory>
 
 # Helper functions
 function getOggNames () {
-	find "$1" -maxdepth 1 -regextype posix-extended -regex '.*\.ogg$'
+	find "$1" -maxdepth 1 -type f -regextype posix-extended -regex '.*\.ogg$'
 }
 
 function getFlacNames () {
-	find "$1" -maxdepth 1 -regextype posix-extended -regex '.*\.flac$'
+	find "$1" -maxdepth 1 -type f -regextype posix-extended -regex '.*\.flac$'
 }
 
 function getOggCount () {
@@ -152,7 +152,7 @@ declare -a oggFiles
 while IFS=  read -r -d $'\0';
 do
 	oggFiles+=("$REPLY")
-done < <(find "$OGGDIR" -maxdepth 1 -regextype posix-extended -regex '.*\.ogg$' -print0)
+done < <(find "$OGGDIR" -maxdepth 1 -type f -regextype posix-extended -regex '.*\.ogg$' -print0)
 
 
 # Step 2: Get *.flac file list
@@ -161,7 +161,7 @@ declare -a flacFiles
 while IFS=  read -r -d $'\0';
 do
 	flacFiles+=("$REPLY")
-done < <(find "$FLACDIR" -maxdepth 1 -regextype posix-extended -regex '.*\.flac$' -print0)
+done < <(find "$FLACDIR" -maxdepth 1 -type f -regextype posix-extended -regex '.*\.flac$' -print0)
 
 
 # Step 3: Strip the extensions
