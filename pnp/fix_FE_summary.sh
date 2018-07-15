@@ -24,7 +24,7 @@ iconv -f ISO-8859-15 -t UTF-8 -o "$1".tmp "$1"
 # Convert to sensible newlines
 dos2unix "$1".tmp
 
-# Line 1: Convert DD.MM.YYYY date to DD. Month YYYY date
+# Line 1: Convert DD.MM.YYYY date to DD. Month YYYY date (without leading zero day)
 sed -r -i \
 	-e '1,1s/(Zusammenfassung vom [0-9]{1,2}\.)0?1\.([0-9]+)/\1 Januar \2/' \
 	-e '1,1s/(Zusammenfassung vom [0-9]{1,2}\.)0?2\.([0-9]+)/\1 Februar \2/' \
@@ -38,6 +38,7 @@ sed -r -i \
 	-e '1,1s/(Zusammenfassung vom [0-9]{1,2}\.)10\.([0-9]+)/\1 Oktober \2/' \
 	-e '1,1s/(Zusammenfassung vom [0-9]{1,2}\.)11\.([0-9]+)/\1 November \2/' \
 	-e '1,1s/(Zusammenfassung vom [0-9]{1,2}\.)12\.([0-9]+)/\1 Dezember \2/' \
+	-e '1,1s/(Zusammenfassung vom )(0([0-9])|([123][0-9]))(\..*)$/\1\3\4\5/' \
 	"$1".tmp
 
 # Line 2: Adjust number of equal signs to line length of line 1
