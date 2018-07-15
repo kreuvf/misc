@@ -67,18 +67,37 @@ sed -r -i \
 sed -r -i \
 	-e 's/([^& \t])\&([^& \t])/\1 \& \2/g' \
 	-e 's/^(.*)[ \t]+$/\1/' \
+	-e 's//'"'"'/g' \
 	-e 's/\b([0-9]+)([DSHK])\b/\1 \2/g' \
+	-e 's/\bCugon\b/Cugono/g' \
 	-e 's/daß/dass/g' \
+	-e 's/detaliert/detailliert/g' \
+	-e 's/erkennbbar/erkennbar/g' \
+	-e 's/Fakel/Fackel/g' \
+	-e 's/Fluß/Fluss/g' \
+	-e 's/Guppe/Gruppe/g' \
+	-e 's/Invalsveste/Ingvalsfeste/g' \
 	-e 's/Küraß/Kürass/g' \
 	-e 's/kurschtelt/kruschtelt/g' \
+	-e 's/Lohwangen/Lowangen/g' \
+	-e 's/Nimue/Nimuan/g' \
+	-e 's/Perraine/Peraine/g' \
+	-e 's/Ri Stadtinneres/Richtung Stadtinneres/g' \
+	-e 's/Schankmagt/Schankmagd/g' \
 	-e 's/[Ss]chwarz \& [Rr]ot/Schwarz \& Rot/g' \
 	-e 's/Tunier/Turnier/g' \
+	-e 's/überbrüft/überprüft/g' \
+	-e 's/unütz/unnütz/g' \
+	-e 's/Zunfhäuser/Zunfthäuser/g' \
 	-e 's/zurüchtgewiesen/zurechtgewiesen/g' \
 	"$1".tmp
 
 # Unabbreviate
 sed -r -i \
+	-e 's/bzw\./beziehungsweise/g' \
 	-e 's/bzgl\./bezüglich/g' \
+	-e 's/evtl\./eventuell/g' \
+	-e 's/wg\./wegen/g' \
 	"$1".tmp
 
 # Replace input file
