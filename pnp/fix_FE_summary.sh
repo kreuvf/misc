@@ -61,7 +61,7 @@ sed -r -i \
 	-e "4,4s/.*/$HEADINGLINE/" \
 	"$1".tmp
 
-# Todo: Remove empty newlines (except for one)
+# Todo: Remove consecutive empty newlines (except for one)
 
 # Fix spelling and punctuation issues
 sed -r -i \
