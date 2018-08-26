@@ -68,7 +68,12 @@ sed -r -i \
 	-e 's/([^& \t])\&([^& \t])/\1 \& \2/g' \
 	-e 's/^(.*)[ \t]+$/\1/' \
 	-e 's//'"'"'/g' \
+	-e 's/([0-9]\.)(PRA|RON|EFF|TRA|BOR|HES|FIR|TSA|PHE|PER|ING|RAH|NL|Praios|Rondra|Efferd|Travia|Boron|Hesinde|Firun|Tsa|Phex|Peraine|Ingerimm|Rahja|Tage? ohne Namen|Namenloser? Tage?)/\1 \2/g' \
+	-e 's/([0-9])(Sommer)/\1 \2/g' \
 	-e 's/\b([0-9]+)([DSHK])\b/\1 \2/g' \
+	-e 's/Abogast/Arbogast/g' \
+	-e 's\bAnatomi\b/Anatomie/g' \
+	-e 's/beiss(t|en)/beiß\1/g' \
 	-e 's/\bCugon\b/Cugono/g' \
 	-e 's/daß/dass/g' \
 	-e 's/detaliert/detailliert/g' \
@@ -76,6 +81,7 @@ sed -r -i \
 	-e 's/Fakel/Fackel/g' \
 	-e 's/Fluß/Fluss/g' \
 	-e 's/Guppe/Gruppe/g' \
+	-e 's/Ingere?im([^m])/Ingerimm\1/g' \
 	-e 's/Invalsveste/Ingvalsfeste/g' \
 	-e 's/Küraß/Kürass/g' \
 	-e 's/kurschtelt/kruschtelt/g' \
@@ -83,11 +89,14 @@ sed -r -i \
 	-e 's/Nimue/Nimuan/g' \
 	-e 's/Perraine/Peraine/g' \
 	-e 's/Ri Stadtinneres/Richtung Stadtinneres/g' \
+	-e 's/rumreich/ruhmreich/g' \
 	-e 's/Schankmagt/Schankmagd/g' \
 	-e 's/[Ss]chwarz \& [Rr]ot/Schwarz \& Rot/g' \
 	-e 's/Tunier/Turnier/g' \
 	-e 's/überbrüft/überprüft/g' \
 	-e 's/unütz/unnütz/g' \
+	-e 's/Volorion/Wolorion/g' \
+	-e 's/Zsatempel/Tsatempel/g' \
 	-e 's/Zunfhäuser/Zunfthäuser/g' \
 	-e 's/zurüchtgewiesen/zurechtgewiesen/g' \
 	"$1".tmp
