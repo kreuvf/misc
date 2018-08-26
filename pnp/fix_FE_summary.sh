@@ -101,6 +101,9 @@ sed -r -i \
 	-e 's/zurüchtgewiesen/zurechtgewiesen/g' \
 	"$1".tmp
 
+# Remove trailing whitespace
+sed -r -i -e 's/[ \t]+$//g' "$1".tmp
+
 # Unabbreviate
 sed -r -i \
 	-e 's/bzw\./beziehungsweise/g' \
