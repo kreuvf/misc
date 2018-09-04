@@ -87,6 +87,7 @@ sed -r -i \
 	-e 's/kurschtelt/kruschtelt/g' \
 	-e 's/Lohwangen/Lowangen/g' \
 	-e 's/Nimue/Nimuan/g' \
+	-e 's/Occulis Astralis/Oculus Astralis/g' \
 	-e 's/Perraine/Peraine/g' \
 	-e 's/Ri Stadtinneres/Richtung Stadtinneres/g' \
 	-e 's/rumreich/ruhmreich/g' \
