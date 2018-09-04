@@ -72,7 +72,7 @@ sed -r -i \
 	-e 's/([0-9])(Sommer)/\1 \2/g' \
 	-e 's/\b([0-9]+)([DSHK])\b/\1 \2/g' \
 	-e 's/Abogast/Arbogast/g' \
-	-e 's\bAnatomi\b/Anatomie/g' \
+	-e 's/\bAnatomi\b/Anatomie/g' \
 	-e 's/beiss(t|en)/beiß\1/g' \
 	-e 's/\bCugon\b/Cugono/g' \
 	-e 's/daß/dass/g' \
