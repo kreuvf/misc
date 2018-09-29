@@ -35,6 +35,7 @@ fi
 if [ ! -d "$1" ];
 then
 	echo "Argument is either not a directory or does not exist. Aborting ..."
+	exit 1
 fi
 
 # Gather translation files for deletion
