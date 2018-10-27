@@ -81,11 +81,14 @@ sed -r -i \
 	-e 's/Fakel/Fackel/g' \
 	-e 's/Fluß/Fluss/g' \
 	-e 's/Guppe/Gruppe/g' \
+	-e 's/heiss(t|en)/heiß\1/g' \
 	-e 's/Ingere?im([^m])/Ingerimm\1/g' \
 	-e 's/Invalsveste/Ingvalsfeste/g' \
+	-e 's/Invall/Ingval/g' \
 	-e 's/Kaputze/Kapuze/g' \
 	-e 's/Küraß/Kürass/g' \
 	-e 's/kurschtelt/kruschtelt/g' \
+	-e 's/Kvlaor/Kvalor/g' \
 	-e 's/Lohwangen/Lowangen/g' \
 	-e 's/Nimue/Nimuan/g' \
 	-e 's/Occulis Astralis/Oculus Astralis/g' \
@@ -94,6 +97,7 @@ sed -r -i \
 	-e 's/rumreich/ruhmreich/g' \
 	-e 's/Schankmagt/Schankmagd/g' \
 	-e 's/[Ss]chwarz \& [Rr]ot/Schwarz \& Rot/g' \
+	-e 's/spornsteich/spornstreichs/g' \
 	-e 's/Troubel/Trubel/g' \
 	-e 's/Tunier/Turnier/g' \
 	-e 's/überbrüft/überprüft/g' \
