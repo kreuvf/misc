@@ -1,0 +1,5 @@
+MSMOUSE=`xinput list --short | grep --max-count=1 'Microsoft  Microsoft Basic Optical Mouse v2.0' | sed -r -e 's/^.*Microsoft  Microsoft Basic Optical Mouse v2\.0.*id=([0-9]+).*$/\1/'`
+xinput set-prop "$MSMOUSE" 'Device Accel Profile' -1
+xinput set-prop "$MSMOUSE" 'Device Accel Constant Deceleration' 0.7
+xinput set-prop "$MSMOUSE" 'Device Accel Adaptive Deceleration' 1
+xinput set-prop "$MSMOUSE" 'Device Accel Velocity Scaling' 0.3
