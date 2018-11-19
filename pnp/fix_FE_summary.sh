@@ -96,12 +96,15 @@ sed -r -i \
 	-e 's/Ri Stadtinneres/Richtung Stadtinneres/g' \
 	-e 's/rumreich/ruhmreich/g' \
 	-e 's/Schankmagt/Schankmagd/g' \
+	-e 's/Schloß/Schloss/g' \
 	-e 's/[Ss]chwarz \& [Rr]ot/Schwarz \& Rot/g' \
 	-e 's/spornsteich/spornstreichs/g' \
+	-e 's/Traviens Wiese/Travienswiese/g' \
 	-e 's/Troubel/Trubel/g' \
 	-e 's/Tunier/Turnier/g' \
 	-e 's/überbrüft/überprüft/g' \
 	-e 's/unütz/unnütz/g' \
+	-e 's/uzr/zur/g' \
 	-e 's/Volorion/Wolorion/g' \
 	-e 's/Zsatempel/Tsatempel/g' \
 	-e 's/Zunfhäuser/Zunfthäuser/g' \
