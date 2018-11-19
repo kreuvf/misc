@@ -55,7 +55,7 @@ TITLE=`echo "$1" | tr "_" " " | sed -r -e 's/^.{8,8} (.*)\.txt$/\1/'`
 ## Input title
 sed -r -i -e "3,3s/.*/$TITLE/" "$1".tmp
 ## Add single dash underline
-HEADINGLENGTH=`sed -r -e '3q;d' "$1".tmp | wc -c`
+HEADINGLENGTH=`sed -r -e '3q;d' "$1".tmp | wc -m`
 HEADINGLINE=`seq -s- $HEADINGLENGTH | tr -d '[:digit:]'`
 sed -r -i \
 	-e "4,4s/.*/$HEADINGLINE/" \
