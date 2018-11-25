@@ -77,9 +77,11 @@ sed -r -i \
 	-e 's/\bCugon\b/Cugono/g' \
 	-e 's/daß/dass/g' \
 	-e 's/detaliert/detailliert/g' \
+	-e 's/Efferda(oi|io)s/Efferdaïos/g' \
 	-e 's/erkennbbar/erkennbar/g' \
 	-e 's/Fakel/Fackel/g' \
 	-e 's/Fluß/Fluss/g' \
+	-e 's/gleichmässig/gleichmäßig/g' \
 	-e 's/Guppe/Gruppe/g' \
 	-e 's/heiss(t|en)/heiß\1/g' \
 	-e 's/Ingere?im([^m])/Ingerimm\1/g' \
@@ -90,6 +92,7 @@ sed -r -i \
 	-e 's/kurschtelt/kruschtelt/g' \
 	-e 's/Kvlaor/Kvalor/g' \
 	-e 's/Lohwangen/Lowangen/g' \
+	-e 's/Menhier/Menhir/g' \
 	-e 's/Nimue/Nimuan/g' \
 	-e 's/Occulis Astralis/Oculus Astralis/g' \
 	-e 's/Perraine/Peraine/g' \
@@ -97,6 +100,7 @@ sed -r -i \
 	-e 's/rumreich/ruhmreich/g' \
 	-e 's/Schankmagt/Schankmagd/g' \
 	-e 's/Schloß/Schloss/g' \
+	-e 's/schmeiss(t|en)/schmeiß\1/g' \
 	-e 's/[Ss]chwarz \& [Rr]ot/Schwarz \& Rot/g' \
 	-e 's/spornsteich/spornstreichs/g' \
 	-e 's/Traviens Wiese/Travienswiese/g' \
