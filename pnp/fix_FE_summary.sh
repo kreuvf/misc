@@ -64,21 +64,29 @@ sed -r -i \
 # Todo: Remove consecutive empty newlines (except for one)
 
 # Fix spelling and punctuation issues
+#  is Windows Codepage 1252 for "‘"
+#  is Windows Codepage 1252 for "’"
 sed -r -i \
 	-e 's/([^& \t])\&([^& \t])/\1 \& \2/g' \
 	-e 's/^(.*)[ \t]+$/\1/' \
 	-e 's//'"'"'/g' \
+	-e 's//'"'"'/g' \
 	-e 's/([0-9]\.)(PRA|RON|EFF|TRA|BOR|HES|FIR|TSA|PHE|PER|ING|RAH|NL|Praios|Rondra|Efferd|Travia|Boron|Hesinde|Firun|Tsa|Phex|Peraine|Ingerimm|Rahja|Tage? ohne Namen|Namenloser? Tage?)/\1 \2/g' \
 	-e 's/([0-9])(Sommer)/\1 \2/g' \
 	-e 's/\b([0-9]+)([DSHK])\b/\1 \2/g' \
 	-e 's/Abogast/Arbogast/g' \
 	-e 's/\bAnatomi\b/Anatomie/g' \
+	-e 's/Arkanoglypen/Arkanoglyphen/g' \
+	-e 's/Auswirklung/Auswirkung/g' \
 	-e 's/beiss(t|en)/beiß\1/g' \
+	-e 's/Beschluß/Beschluss/g' \
 	-e 's/\bCugon\b/Cugono/g' \
 	-e 's/daß/dass/g' \
 	-e 's/detaliert/detailliert/g' \
-	-e 's/Efferda(oi|io)s/Efferdaïos/g' \
+	-e 's/dilletantisch/dilettantisch/g' \
+	-e 's/Efferda(o[iî]|[iî]o)s/Efferdaïos/g' \
 	-e 's/erkennbbar/erkennbar/g' \
+	-e 's/Facklen/Fackeln/g' \
 	-e 's/Fakel/Fackel/g' \
 	-e 's/Fluß/Fluss/g' \
 	-e 's/gleichmässig/gleichmäßig/g' \
@@ -96,6 +104,7 @@ sed -r -i \
 	-e 's/Nimue/Nimuan/g' \
 	-e 's/Occulis Astralis/Oculus Astralis/g' \
 	-e 's/Perraine/Peraine/g' \
+	-e 's/Regenguß/Regenguss/g' \
 	-e 's/Ri Stadtinneres/Richtung Stadtinneres/g' \
 	-e 's/rumreich/ruhmreich/g' \
 	-e 's/Schankmagt/Schankmagd/g' \
@@ -103,6 +112,7 @@ sed -r -i \
 	-e 's/schmeiss(t|en)/schmeiß\1/g' \
 	-e 's/[Ss]chwarz \& [Rr]ot/Schwarz \& Rot/g' \
 	-e 's/spornsteich/spornstreichs/g' \
+	-e 's/Throwal/Thorwal/g' \
 	-e 's/Traviens Wiese/Travienswiese/g' \
 	-e 's/Troubel/Trubel/g' \
 	-e 's/Tunier/Turnier/g' \
@@ -110,6 +120,7 @@ sed -r -i \
 	-e 's/unütz/unnütz/g' \
 	-e 's/uzr/zur/g' \
 	-e 's/Volorion/Wolorion/g' \
+	-e 's/Zhayas/Zhayad/g' \
 	-e 's/Zsatempel/Tsatempel/g' \
 	-e 's/Zunfhäuser/Zunfthäuser/g' \
 	-e 's/zurüchtgewiesen/zurechtgewiesen/g' \
