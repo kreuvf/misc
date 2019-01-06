@@ -84,7 +84,7 @@ sed -r -i \
 	-e 's/daß/dass/g' \
 	-e 's/detaliert/detailliert/g' \
 	-e 's/dilletantisch/dilettantisch/g' \
-	-e 's/Efferda(o[iî]|[iî]o)s/Efferdaïos/g' \
+	-e 's/Er?fferda(o[iî]|[iî]o)s/Efferdaïos/g' \
 	-e 's/erkennbbar/erkennbar/g' \
 	-e 's/Facklen/Fackeln/g' \
 	-e 's/Fakel/Fackel/g' \
@@ -100,10 +100,12 @@ sed -r -i \
 	-e 's/kurschtelt/kruschtelt/g' \
 	-e 's/Kvlaor/Kvalor/g' \
 	-e 's/Lohwangen/Lowangen/g' \
+	-e 's/Maraleis/Maraleïs/g' \
 	-e 's/Menhier/Menhir/g' \
 	-e 's/Nimue/Nimuan/g' \
 	-e 's/Occulis Astralis/Oculus Astralis/g' \
 	-e 's/Perraine/Peraine/g' \
+	-e 's/Rahajlieb/Rahjalieb/g' \
 	-e 's/Regenguß/Regenguss/g' \
 	-e 's/Ri Stadtinneres/Richtung Stadtinneres/g' \
 	-e 's/rumreich/ruhmreich/g' \
@@ -134,6 +136,7 @@ sed -r -i \
 	-e 's/bzw\./beziehungsweise/g' \
 	-e 's/bzgl\./bezüglich/g' \
 	-e 's/evtl\./eventuell/g' \
+	-e 's/lt\./laut/g' \
 	-e 's/wg\./wegen/g' \
 	"$1".tmp
 
