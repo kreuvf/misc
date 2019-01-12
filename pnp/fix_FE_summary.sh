@@ -75,15 +75,20 @@ sed -r -i \
 	-e 's/([0-9])(Sommer)/\1 \2/g' \
 	-e 's/\b([0-9]+)([DSHK])\b/\1 \2/g' \
 	-e 's/Abogast/Arbogast/g' \
+	-e 's/Abschluß/Abschluss/g' \
+	-e 's/abwechseld/abwechselnd/g' \
 	-e 's/\bAnatomi\b/Anatomie/g' \
 	-e 's/Arkanoglypen/Arkanoglyphen/g' \
 	-e 's/Auswirklung/Auswirkung/g' \
+	-e 's/Bärnfried/Bernfried/g' \
+	-e 's/beindruckt/beeindruckt/g' \
 	-e 's/beiss(t|en)/beiß\1/g' \
 	-e 's/Beschluß/Beschluss/g' \
 	-e 's/\bCugon\b/Cugono/g' \
 	-e 's/daß/dass/g' \
 	-e 's/detaliert/detailliert/g' \
 	-e 's/dilletantisch/dilettantisch/g' \
+	-e 's/ebefalls/ebenfalls/g' \
 	-e 's/Er?fferda(o[iî]|[iî]o)s/Efferdaïos/g' \
 	-e 's/erkennbbar/erkennbar/g' \
 	-e 's/Facklen/Fackeln/g' \
@@ -103,10 +108,12 @@ sed -r -i \
 	-e 's/Maraleis/Maraleïs/g' \
 	-e 's/Menhier/Menhir/g' \
 	-e 's/Nimue/Nimuan/g' \
+	-e 's/Niuan/Ni'"'"'Uan/g' \
 	-e 's/Occulis Astralis/Oculus Astralis/g' \
 	-e 's/Perraine/Peraine/g' \
 	-e 's/Rahajlieb/Rahjalieb/g' \
 	-e 's/Regenguß/Regenguss/g' \
+	-e 's/reiss(t|en)/reiß\1/g' \
 	-e 's/Ri Stadtinneres/Richtung Stadtinneres/g' \
 	-e 's/rumreich/ruhmreich/g' \
 	-e 's/Schankmagt/Schankmagd/g' \
