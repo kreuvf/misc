@@ -90,6 +90,7 @@ sed -r -i \
 	-e 's/dilletantisch/dilettantisch/g' \
 	-e 's/ebefalls/ebenfalls/g' \
 	-e 's/Er?fferda(o[iî]|[iî]o)s/Efferdaïos/g' \
+	-e 's/erignislos/ereignislos/g' \
 	-e 's/erkennbbar/erkennbar/g' \
 	-e 's/Facklen/Fackeln/g' \
 	-e 's/Fakel/Fackel/g' \
