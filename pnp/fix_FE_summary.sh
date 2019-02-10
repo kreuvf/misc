@@ -78,6 +78,7 @@ sed -r -i \
 	-e 's/A([bn])schluß/A\1schluss/g' \
 	-e 's/abwechseld/abwechselnd/g' \
 	-e 's/\bAnatomi\b/Anatomie/g' \
+	-e 's/abrupt/abrupt/g' \
 	-e 's/Arkanoglypen/Arkanoglyphen/g' \
 	-e 's/Auswirklung/Auswirkung/g' \
 	-e 's/Bärnfried/Bernfried/g' \
@@ -121,6 +122,7 @@ sed -r -i \
 	-e 's/Schankmagt/Schankmagd/g' \
 	-e 's/Schloß/Schloss/g' \
 	-e 's/schmeiss(t|en)/schmeiß\1/g' \
+	-e 's/schußbereit/schussbereit/g' \
 	-e 's/[Ss]chwarz \& [Rr]ot/Schwarz \& Rot/g' \
 	-e 's/spornsteich/spornstreichs/g' \
 	-e 's/Throwal/Thorwal/g' \
