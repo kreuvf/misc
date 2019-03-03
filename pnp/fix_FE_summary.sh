@@ -120,7 +120,7 @@ sed -r -i \
 	-e 's/Ri Stadtinneres/Richtung Stadtinneres/g' \
 	-e 's/rumreich/ruhmreich/g' \
 	-e 's/Schankmagt/Schankmagd/g' \
-	-e 's/Schloß/Schloss/g' \
+	-e 's/[sS]chloß/[sS]chloss/g' \
 	-e 's/schmeiss(t|en)/schmeiß\1/g' \
 	-e 's/schußbereit/schussbereit/g' \
 	-e 's/[Ss]chwarz \& [Rr]ot/Schwarz \& Rot/g' \
