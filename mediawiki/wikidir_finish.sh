@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Part 3 of Upgrading MediaWiki
-# Run this in the wiki repository to
+# Run this in the wiki repository to (inside the wiki directory)
 # 	Get back files deleted
 # 	Remove deleted files with git
 # 	Add changed files with git
