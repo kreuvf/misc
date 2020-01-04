@@ -14,6 +14,7 @@ git status --porcelain \
 		-e '/^ D/!d' \
 		-e 's|^ D ||' \
 		-e '/^\.signal/d' \
+		-e '/^[^/]+\/\.signal/d' \
 		-e '/^[^/]+\/(includes|extensions\/(Cite|ParserFunctions|WikiEditor)\/tests|maintenance|resources|serialized|skins|tests|vendor)/d' \
 	| xargs git checkout --
 
@@ -40,6 +41,7 @@ git status --porcelain \
 		-e '/^\?\?/!d' \
 		-e 's|^\?\? ||' \
 		-e '/^\.signal/d' \
+		-e '/^[^/]+\/\.signal/d' \
 	| xargs git add
 
 echo "Stage 4 Clear"
