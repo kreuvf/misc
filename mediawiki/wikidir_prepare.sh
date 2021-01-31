@@ -75,6 +75,12 @@ fi
 git ls-files -z \
 	| sed -r \
 		-e 's|resources/assets/Avatar_Wiki_160px\.png\x0||g' \
+		-e 's|resources/assets/LinLibertine/LinLibertine_R\.otf\x0||g' \
+		-e 's|resources/assets/LinLibertine/LinLibertine_RB\.otf\x0||g' \
+		-e 's|resources/assets/LinLibertine/LinLibertine_RBI\.otf\x0||g' \
+		-e 's|resources/assets/LinLibertine/LinLibertine_RI\.otf\x0||g' \
+		-e 's|resources/assets/LinLibertine/LinLibertine_RZ\.otf\x0||g' \
+		-e 's|resources/assets/LinLibertine/LinLibertine_RZI\.otf\x0||g' \
 	| xargs -0 rm -f
 
 # WARNING: No exceptions.
