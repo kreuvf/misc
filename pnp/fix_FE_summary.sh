@@ -85,6 +85,7 @@ sed -r -i \
 	-e 's/beindruckt/beeindruckt/g' \
 	-e 's/beiss(t|en)/beiß\1/g' \
 	-e 's/Beschluß/Beschluss/g' \
+	-e 's/Bronjar/Bronnjar/g' \
 	-e 's/\bCugon\b/Cugono/g' \
 	-e 's/daß/dass/g' \
 	-e 's/detaliert/detailliert/g' \
@@ -103,6 +104,7 @@ sed -r -i \
 	-e 's/Invalsveste/Ingvalsfeste/g' \
 	-e 's/Invall/Ingval/g' \
 	-e 's/Kaputze/Kapuze/g' \
+	-e 's/Karavane/Karawane/g' \
 	-e 's/Küraß/Kürass/g' \
 	-e 's/kurschtelt/kruschtelt/g' \
 	-e 's/Kvlaor/Kvalor/g' \
