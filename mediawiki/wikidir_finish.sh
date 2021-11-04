@@ -9,6 +9,12 @@
 # 
 # This script does no automatic committing
 
+if [ ! -e 'wiki.dsa.isurandil.net' ];
+then
+	echo "Wrong working directory. Run this in the wiki repository, not inside the wiki folder (inside the FTP folder, not inside wiki.something/FTP/wiki.something)."
+	exit 1
+fi
+
 # Stage 1: Recover deleted files still wanted
 # sed commands do
 # 	Get lines of deleted files (scrap all lines not for deleted files)
