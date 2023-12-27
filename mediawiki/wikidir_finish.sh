@@ -15,20 +15,32 @@ then
 	exit 1
 fi
 
-# Stage 1: Recover deleted files still wanted
+# Stage 0: Report deleted files
+# This allows to manually fix things.
 # sed commands do
 # 	Get lines of deleted files (scrap all lines not for deleted files)
 # 	Remove the prefix to get a path
 # 	Don't care about .signal ...
 # 	... no matter where it may reside
-# 	Do not care about deletions in includes/, extensions/Cite/tests/, extensions/ParserFunctions/tests/, extensions/WikiEditor/tests/, maintenance/, resources/, serialized/, skins/, tests/ and vendor/
+# 	Remove entries of files/directories that do not match certain "protected" files
+echo "The following files existing prior to the update will be deleted. Please have a look at these and check whether the script did accidentally not save one of those:"
 git status --porcelain \
 	| sed -r \
 		-e '/^ D/!d' \
 		-e 's|^ D ||' \
 		-e '/^\.signal/d' \
 		-e '/^[^/]+\/\.signal/d' \
-		-e '/^[^/]+\/(includes|extensions\/(Cite|ParserFunctions|WikiEditor)\/tests|maintenance|resources|serialized|skins|tests|vendor)/d' \
+		-e '/^[^/]+\/(LocalSettings\.php)/d' > wikidir-finish_deleted_files.log
+echo "Stage 0 Clear"
+
+# Stage 1: Recover deleted files still wanted
+git status --porcelain \
+	| sed -r \
+		-e '/^ D/!d' \
+		-e 's|^ D ||' \
+		-e '/^\.signal/d' \
+		-e '/^[^/]+\/\.signal/d' \
+		-e '/^[^/]+\/(LocalSettings\.php)/!d' \
 	| xargs git checkout --
 
 echo "Stage 1 Clear"
