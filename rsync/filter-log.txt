@@ -1,0 +1,2 @@
+# Regex-only
+^(deleting )?(\.mozilla/firefox/[^/]+/storage/[^\n]+|\.telegram/tdata/user_data/cache/[^\n]+)\n
