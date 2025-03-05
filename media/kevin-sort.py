@@ -14,6 +14,7 @@
 # Inputs
 # Text files with one title followed by a tab followed by the ISRC: USUAN...
 # identifier per line.
+# Requires one file "old.txt" and one file "new.txt" in the directory it is called in.
 
 with open("old.txt", mode = "r", encoding = "utf8") as f:
 	oldkev = f.read().splitlines()
